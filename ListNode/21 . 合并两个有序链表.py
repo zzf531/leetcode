@@ -3,6 +3,7 @@ class ListNode:
          self.val = x
          self.next = None
 
+
 class Solution:
     def mergeTwoLists(self, l1, l2):
         if l1 is None:
