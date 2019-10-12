@@ -1,18 +1,16 @@
-# def sanjiaox(a, b):
-#     return a*b/2
-# a = input('长')
-# b = input('高')
-# print(sanjiaox(3,4))
-'''
-  *
- ***
-*****
-'''
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
 
-
-for i in range(5):
-    for j in range(i+1):
-        print('*', end='')
-    print()
-
-
+l1 = ListNode(1)
+b = ListNode(2)
+c = ListNode(5)
+d = ListNode(7)
+l1.next = b
+b.next = c
+c.next= d
+print(b.next.val)
+while b:
+     print(b.val)
+     b = b.next
