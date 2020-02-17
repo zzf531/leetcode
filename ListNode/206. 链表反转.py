@@ -18,7 +18,7 @@ class Solution:
 
 l1 = ListNode(1)
 b = ListNode(2)
-c = ListNode(5)
+c = ListNode(3)
 l1.next = b
 b.next = c
 a = Solution()
