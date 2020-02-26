@@ -4,7 +4,7 @@ class ListNode:
         self.next = None
 
 class Solution:
-    def sortList(self, head):
+    def sortList(self, head):  # 放入list排序,放回ListNode
         l = []
         p = head
         while p:
