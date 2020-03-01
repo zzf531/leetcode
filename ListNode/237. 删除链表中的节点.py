@@ -8,8 +8,3 @@ class Solution:
     def deleteNode(self, node: ListNode):
         node.val = node.next.val
         node.next = node.next.next
-
-def a(aa: list):
-    return aa[1]
-
-print(a(1))

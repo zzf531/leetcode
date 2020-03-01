@@ -49,7 +49,7 @@ T9 = TreeNode(9)
 
 T1.left = T2
 T2.left = T3
-T3.right = T4
+T2.right = T4
 T4.left = T5
 T4.right = T6
 
