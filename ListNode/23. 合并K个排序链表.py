@@ -1,8 +1,4 @@
-class ListNode(object):
-    def __init__(self, x):
-        self.val = x
-        self.next = None
-
+from ListNode.List_node_Base import ListNode, generateList, printList
 
 class Solution(object):
     def mergeKLists(self, lists):
@@ -16,22 +12,6 @@ class Solution(object):
             point.next = ListNode(x)
             point = point.next
         return head.next
-
-
-def generateList(l):
-    pernode = ListNode(0)
-    lastnode = pernode
-    for val in l:
-        lastnode.next = ListNode(val)
-        lastnode = lastnode.next
-    return pernode.next
-
-
-def printList(l):
-    while l:
-        print("%d, " % l.val, end='')
-        l = l.next
-    print('')
 
 
 if __name__ == '__main__':

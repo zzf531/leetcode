@@ -1,7 +1,5 @@
-class ListNode:
-    def __init__(self, x):
-        self.val = x
-        self.next = None
+from ListNode.List_node_Base import ListNode, generateList, printList
+
 
 class Solution:
     def sortList(self, head):  # 放入list排序,放回ListNode
@@ -18,16 +16,7 @@ class Solution:
         return head
 
 
-l1 = ListNode(3)
-l2 = ListNode(9)
-l3 = ListNode(2)
-l4 = ListNode(101)
-l1.next = l2
-l2.next = l3
-l3.next = l4
-
+l1 = generateList([5, 1, 2, 5, 15, 34])
 a = Solution()
-call_list = a.sortList(l1)
-while call_list:
-    print(call_list.val)
-    call_list = call_list.next
+k = a.sortList(l1)
+printList(k)

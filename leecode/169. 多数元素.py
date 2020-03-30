@@ -17,10 +17,10 @@ class Solution:
         print(len(nums))
         nums.sort()
         print('排序数组', nums)
-        return nums[len(nums) // 2]
+        return nums[(len(nums) // 2)+1]
 
 
 a = Solution()
-print(a.majorityElement([2, 3, 3, 2, 3]))
-print(a.setElement([1,2,2,3,3,3]))
-print(a.sortElement([1,2,2,3,3,3,4,4,4,4]))
+# print(a.majorityElement([2, 3, 3, 2, 3]))
+# print(a.setElement([1,2,2,3,3,3]))
+print(a.sortElement([2,2,1,1,1,2,2]))

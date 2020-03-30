@@ -10,4 +10,4 @@ class Solution:
 
 a = Solution()
 print(a.singleNumber([1,2,2,3,3]))
-print(a.less1([4, 1, 1, 2, 2]))
+print(a.less1([1, 1, 2, 2, 4 ]))

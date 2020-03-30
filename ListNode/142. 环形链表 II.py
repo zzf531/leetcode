@@ -8,7 +8,7 @@ class Solution(object):
         visited = set()
 
         node = head
-        while node is not None:
+        while node:
             if node in visited:
                 return node.val
             else:

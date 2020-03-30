@@ -1,23 +1,4 @@
-class ListNode(object):
-    def __init__(self, x):
-        self.val = x
-        self.next = None
-
-
-def generateList(l: list):
-    prenode = ListNode(0)
-    lastnode = prenode
-    for val in l:
-        lastnode.next = ListNode(val)
-        lastnode = lastnode.next
-    return prenode.next
-
-
-def printList(l: ListNode):
-    while l:
-        print("%d, " %(l.val), end='')
-        l = l.next
-    print('')
+from ListNode.List_node_Base import ListNode, generateList, printList
 
 
 class Solution:
@@ -36,9 +17,7 @@ class Solution:
             n += 1
         print('求n的值', 5)
         old_tail.next = head  # 尾巴和头相连接
-        # print(id(old_tail), id(head))
-        # find new tail : (n - k % n - 1)th node
-        # and new head : (n - k % n)th node
+
         new_tail = head
         print(head.val)
         for i in range(n - k % n - 1):

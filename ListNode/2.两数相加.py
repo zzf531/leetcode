@@ -1,24 +1,4 @@
-# Definition for singly-linked list.
-class ListNode:
-    def __init__(self, x):
-        self.val = x
-        self.next = None
-
-
-def generateList(l: list) -> ListNode:
-    prenode = ListNode(0)
-    lastnode = prenode
-    for val in l:
-        lastnode.next = ListNode(val)
-        lastnode = lastnode.next
-    return prenode.next
-
-
-def printList(l: ListNode):
-    while l:
-        print("%d, " %(l.val), end = '')
-        l = l.next
-    print('')
+from ListNode.List_node_Base import ListNode, generateList, printList
 
 
 class Solution(object):
@@ -52,7 +32,3 @@ if __name__ == "__main__":
     s = Solution()
     sum = s.addTwoNumbers(l1,l2)
     printList(sum)
-
-'''
-我上次花呗最低还款200,我只有150,然后我还花呗150,花呗这时额度有150,花呗转我小号,然后转回来,再还款
-'''

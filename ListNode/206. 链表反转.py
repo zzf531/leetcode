@@ -1,11 +1,7 @@
-class ListNode:
-    def __init__(self, x):
-        self.val = x
-        self.next = None
+from ListNode.List_node_Base import ListNode, generateList, printList
 
 
 class Solution:
-
     def reverseList(self, head):
         new_head = None
         while head:
@@ -16,13 +12,7 @@ class Solution:
         return new_head
 
 
-l1 = ListNode(1)
-b = ListNode(2)
-c = ListNode(3)
-l1.next = b
-b.next = c
+l1 = generateList([1, 3, 7])
 a = Solution()
 k = a.reverseList(l1)
-while k:
-    print(k.val)
-    k = k.next
+printList(k)

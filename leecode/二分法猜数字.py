@@ -1,29 +1,8 @@
-import random
-'''
-1、X等于mid，退出程序。
-2、X大于mid，将start改为mid+1，继续递归，直至mid等于X。
-3、X小于mid，将end改为mid-1，继续递归，直至mid等于X。
-'''
+def moveZeroes(nums):
+    for i in range(nums.count(0)):
+        nums.remove(0)
+        nums.append(0)
 
-import random
+    return nums
 
-result = random.randrange(100)
-lower = 0
-upper = 100
-
-while 1:
-    input_number = input('Enter your number(%s - %s): '%(lower, upper))
-    if input_number.isdigit():
-        number = int(input_number)
-        if number == result:
-            print ('Congratulations, the number is %s.'%result)
-            break
-        elif upper > number > result:
-            upper = number
-        elif lower < number < result:
-            lower = number
-    else:
-        print ('Please enter a number between 0 - 100')
-
-
-
+print(moveZeroes([1,0,0,2,3,4]))

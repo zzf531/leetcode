@@ -1,7 +1,4 @@
-class ListNode:
-     def __init__(self, x):
-         self.val = x
-         self.next = None
+from ListNode.List_node_Base import ListNode, generateList, printList
 
 
 class Solution:
@@ -17,20 +14,9 @@ class Solution:
             l2.next = self.mergeTwoLists(l1, l2.next)
             return l2
 
+
+l1 = generateList([1, 2, 4])
+l2 = generateList([1, 3, 4])
 a = Solution()
-l1 = ListNode(1)
-b = ListNode(2)
-c = ListNode(5)
-l1.next = b
-b.next = c
-
-l2 = ListNode(3)
-b = ListNode(4)
-c = ListNode(6)
-l2.next = b
-b.next = c
-
-k = a.mergeTwoLists(l1,l2)
-while k:
-    print(k.val)
-    k = k.next
+k = a.mergeTwoLists(l1, l2)
+printList(k)
